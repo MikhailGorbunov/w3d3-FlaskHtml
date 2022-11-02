@@ -1,0 +1,24 @@
+
+<html>
+    <head>
+        <title>{{ title }} - Order List</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header><h1>Cat&Mouse Pizza</h1></header>
+        <article>
+        <h2>Order for first customer</h2>
+
+        <div>
+         <p> <b> {{ order.customer_name }}: </b> {{ order.order_date }}: {{ order.food_topping }}: {{ order.description }}: {{ order.quantity }}
+        </div>
+  
+        </article>
+    </body>
+    <footer>
+        <p> address </p>
+        <p> customer information</p>
+        <p> about </p> 
+
+    </footer>
+</html>

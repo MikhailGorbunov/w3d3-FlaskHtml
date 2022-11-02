@@ -1,0 +1,31 @@
+<html>
+   
+
+    <head>
+        <title>{{ title }} - Order List</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+    <body>
+        <header><h1>Cat&Mouse Pizza</h1></header>
+        <article><h2>Order List</h2>
+            {% for order in orders %}
+            <div>
+                <p>
+                <b> {{ order.customer_name }}: </b> {{ order.order_date }}: {{ order.food_topping }}: {{ order.description }}: {{ order.quantity }} 
+                <a href="/orders/{{loop.index}}"> Link </a>
+                </p>
+            </div>
+            {% endfor %}
+        </article>
+    </body>
+    <footer>
+        <p> address </p>
+        <p> customer information</p>
+        <p> about </p> 
+
+    </footer>
+</html>
+
+
+<!-- http://127.0.0.1:4999/orders + /1 -->
